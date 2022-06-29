@@ -10,8 +10,6 @@ module.exports = {
       sm: { max: "501px" },
 
       xs: { max: "400px" },
-      
-      xss: { max: "351px" },
     },
     extend: {},
   },
