@@ -42,14 +42,14 @@ const Input: FC = observer(() => {
   };
 
   return (
-    <div className="w-1/2 pt-20 shadow-xl m-auto h-44 rounded-2xl shadow-slate-300">
-      <div className="flex justify-center">
-        <div>
+    <div className="w-[600px] pt-20 shadow-xl m-auto h-44 rounded-2xl shadow-slate-300 md:w-full xs:h-56">
+      <div className="flex justify-center xs:flex-col xs:mx-3">
+        <div className="xs:mb-6">
           <input
             name="task"
             type="text"
             value={value}
-            className="w-96 px-4 py-2 border-2 border-purple-800 rounded-lg text-lg font-bold text-[#EB4608] placeholder:font-semibold   placeholder:text-orange-500 placeholder:opacity-50 focus-visible:outline-none"
+            className="w-96 px-4 py-2 border-2 border-purple-800 rounded-lg text-lg font-bold text-[#EB4608] placeholder:font-semibold placeholder:text-orange-500 placeholder:opacity-50 focus-visible:outline-none md:w-full sm:text-base"
             placeholder="Write your tasks here :)"
             onChange={e => taskHandler(e)}
             onKeyPress={e => e.key === "Enter" && click()}
@@ -60,7 +60,7 @@ const Input: FC = observer(() => {
           )}
         </div>
         <button
-          className="ml-2 h-12 text-xl font-bold border-2 border-purple-800 text-[#EB4608] px-10 rounded-xl hover:bg-orange-300 hover:text-slate-800 cursor-pointer"
+          className="ml-2 h-12 text-xl font-bold border-2 border-purple-800 text-[#EB4608] px-10 rounded-xl hover:bg-orange-300 hover:text-slate-800 cursor-pointer sm:px-4 sm:text-lg sm:h-[44px] xs:w-full xs:mx-0 "
           type="submit"
           onClick={click}
           disabled={!formValid}
