@@ -11,17 +11,23 @@ const Tabs: FC = observer(() => {
   return (
     <div className="mt-20 w-[740px] m-auto lg:w-[600px] md:w-full">
       <div className="flex mb-2 text-lg text-red-500 md:justify-between">
-        <div className="px-[100px] text-center lg:px-14 md:px-0">
+        <div className="px-[96px] text-center lg:px-14 md:px-0">
           all:
-          <span className="text-[#300089]">{statusAll.all}</span>
+          <span className="text-skin-counterBtn pl-2 transition_forAll">
+            {statusAll.all}
+          </span>
         </div>
         <div className="px-20 text-center lg:px-[100px] md:px-0">
           completed:
-          <span className="text-[#300089]">{statusCompleted.completed}</span>
+          <span className="text-skin-counterBtn pl-2 transition_forAll">
+            {statusCompleted.completed}
+          </span>
         </div>
         <div className="px-20 text-center lg:px-10 md:px-0">
           remaining:
-          <span className="text-[#300089]">{statusDeleted.deleted}</span>
+          <span className="text-skin-counterBtn pl-2 transition_forAll">
+            {statusDeleted.deleted}
+          </span>
         </div>
       </div>
       <div className="flex justify-between md:flex-col md:w-96 md:mx-auto sm:w-full">

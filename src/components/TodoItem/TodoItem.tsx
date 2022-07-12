@@ -26,7 +26,9 @@ const TodoItem: FC<TodoItemProps> = ({ todo, index }) => {
       >
         <div className="text-xl">
           <span className="text-[#EB4608] font-semibold">{index + 1}.</span>
-          <h3 className="text-[#300089]">{todo.title}.</h3>
+          <h3 className="text-skin-itemTitle transition_forAll">
+            {todo.title}.
+          </h3>
         </div>
         <div className="flex sm:block">
           <div className="flex sm:mb-1">

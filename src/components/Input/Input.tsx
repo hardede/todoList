@@ -10,7 +10,7 @@ const Input: FC = observer(() => {
   const [formValid, setFormValid] = useState(false);
   const navigate = useNavigate();
 
-  const click = () => {
+  const addTaskHandler = () => {
     todoStore.addTodo(value);
     navigate("/home");
     setValue("");
@@ -42,17 +42,17 @@ const Input: FC = observer(() => {
   };
 
   return (
-    <div className="w-[600px] pt-20 shadow-xl m-auto h-44 rounded-2xl shadow-slate-300 md:w-full xs:h-56">
+    <div className="w-[600px] pt-20 shadow-xl m-auto h-44 rounded-2xl shadow-skin-shadowCol transition_forAll md:w-full xs:h-56">
       <div className="flex justify-center xs:flex-col xs:mx-3">
         <div className="xs:mb-6">
           <input
             name="task"
             type="text"
             value={value}
-            className="w-96 px-4 py-2 border-2 border-purple-800 rounded-lg text-lg font-bold text-[#EB4608] placeholder:font-semibold placeholder:text-orange-500 placeholder:opacity-50 focus-visible:outline-none md:w-full sm:text-base"
+            className="w-96 px-4 py-2 transition_forAll border-2 bg-skin-input text-skin-input placeholder:text-skin-placeholder border-purple-800 rounded-lg text-lg font-bold placeholder:font-semibold placeholder:opacity-50 placeholder:transition_forAll focus-visible:outline-none md:w-full sm:text-base"
             placeholder="Write your tasks here :)"
             onChange={e => taskHandler(e)}
-            onKeyPress={e => e.key === "Enter" && click()}
+            onKeyPress={e => e.key === "Enter" && addTaskHandler()}
             onBlur={e => blurHandler(e)}
           />
           {taskDirty && taskError && (
@@ -62,7 +62,7 @@ const Input: FC = observer(() => {
         <button
           className="ml-2 h-12 text-xl font-bold border-2 border-purple-800 text-[#EB4608] px-10 rounded-xl hover:bg-orange-300 hover:text-slate-800 cursor-pointer sm:px-4 sm:text-lg sm:h-[44px] xs:w-full xs:mx-0 "
           type="submit"
-          onClick={click}
+          onClick={addTaskHandler}
           disabled={!formValid}
         >
           Add

@@ -1,6 +1,12 @@
 {
-  "cSpell.words": [
-    "autorun",
-    "turborepo"
-  ]
+  "cSpell.words": ["autorun", "turborepo"],
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "html": "HTML"
+  },
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": true
+  }
 }
